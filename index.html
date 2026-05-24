@@ -106,62 +106,94 @@
 </head>
 <body>
 
-  <!-- ═══════════════════════════════════════════
-       NAVBAR
-  ═══════════════════════════════════════════ -->
-    <header>
-        <nav class="nav" id="nav">
+    <!-- ═══════════════════════════════════════════
+        CABEÇALHO / NAVEGAÇÃO PRINCIPAL
+        Substitua o <header> e o <nav class="drawer"> no index.html
+    ═══════════════════════════════════════════ -->
+    <header class="site-header">
+        <nav class="nav" id="nav" aria-label="Navegação principal">
             <div class="wrap nav-in">
-                <a href="#home" class="nav-logo">
-                    <img src="images/logo/karina_logo.svg" alt="Clínica Odontológica em Joinville"
-                        onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-                    <p class="nav-logo-text" style="display:none">Clínica <span>Odontológica</span></p>
+
+            <a href="#home" class="nav-logo" aria-label="GoClean Higienização — voltar ao início">
+                <img src="images/logo/karina_logo.svg" alt="GoClean Higienização"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                <p class="nav-logo-text" style="display:none">Go<span>Clean</span></p>
+            </a>
+
+            <ul class="nav-ul" role="list">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#beneficios">Por que escolher</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#antes-depois">Resultados</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#localizacao">Contato</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <a
+                href="https://wa.me/5547991597258?text=Olá!%20Gostaria%20de%20agendar%20um%20horário."
+                class="nav-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Solicitar orçamento grátis pelo WhatsApp"
+                >
+                <span>Orçamento Grátis</span>
+                <i class="bi bi-whatsapp" aria-hidden="true"></i>
                 </a>
 
-                <ul class="nav-ul">
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#beneficios">Por que nos escolher</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#antes-depois">Resultados</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#localizacao">Contato</a></li>
-                    <li>
-                         <!-- CTA PRINCIPAL -->
-                        <a href="https://wa.me/5547991597258?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avaliação."
-                            class="nav-btn nav-btn-1"
-                            target="_blank"
-                            rel="noopener"
-                            aria-label="Agendar avaliação pelo WhatsApp">
-                            Agendar Avaliação
-                        </a>
-                    </li>
-                </ul>
-
-                 <!-- MENU MOBILE BUTTON -->
-                <button class="hbg" id="hbg" aria-label="Abrir menu" aria-controls="drawer" aria-expanded="false">
-                    <span></span><span></span><span></span>
+                <button
+                class="hbg"
+                id="hbg"
+                type="button"
+                aria-label="Abrir menu de navegação"
+                aria-controls="drawer"
+                aria-expanded="false"
+                >
+                <span class="hbg-bar" aria-hidden="true"></span>
+                <span class="hbg-bar" aria-hidden="true"></span>
                 </button>
             </div>
+
+            </div>
         </nav>
+
+        <!-- Menu mobile fullscreen -->
+        <div
+            class="drawer"
+            id="drawer"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Menu de navegação mobile"
+        >
+            <div class="drawer-inner">
+            <nav class="drawer-nav" aria-label="Links do menu mobile">
+                <ul role="list">
+                <li><a href="#home"         class="drawer-link"><em>01</em>Início</a></li>
+                <li><a href="#beneficios"   class="drawer-link"><em>02</em>Por que escolher</a></li>
+                <li><a href="#servicos"     class="drawer-link"><em>03</em>Serviços</a></li>
+                <li><a href="#antes-depois" class="drawer-link"><em>04</em>Resultados</a></li>
+                <li><a href="#sobre"        class="drawer-link"><em>05</em>Sobre</a></li>
+                <li><a href="#localizacao"  class="drawer-link"><em>06</em>Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="drawer-footer">
+                <a
+                href="https://wa.me/5547991597258?text=Olá!%20Gostaria%20de%20agendar%20um%20horário."
+                class="drawer-cta"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Solicitar orçamento pelo WhatsApp"
+                >
+                <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                Orçamento Grátis
+                </a>
+                <p class="drawer-tagline">Joinville — SC</p>
+            </div>
+            </div>
+        </div>
+
     </header>
-
-    <!-- Mobile Drawer -->
-    <nav class="drawer" id="drawer" aria-label="Menu móvel">
-        <a href="#home">Início</a>
-        <a href="#beneficios">Por que nos escolher</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#antes-depois">Resultados</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#localizacao">Contato</a>
-
-        <!-- CTA MOBILE (ESSENCIAL) -->
-        <a href="https://wa.me/5547991597258?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avaliação."
-            class="drawer-btn"
-            target="_blank"
-            rel="noopener">
-            Agendar Avaliação
-        </a>
-    </nav>
 
     <main>
         <!-- ═══════════════════════════════════════════
